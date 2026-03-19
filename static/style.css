@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin-bottom: 24px;
+    font-size: 1.8rem;
+}
+
+.form-nueva {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.form-nueva input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-nueva input:focus {
+    border-color: #667eea;
+}
+
+.form-nueva button {
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.form-nueva button:hover {
+    background: #5a67d8;
+}
+
+.lista-tareas {
+    list-style: none;
+}
+
+.lista-tareas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.lista-tareas li span {
+    font-size: 1rem;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+}
+
+.acciones a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: transform 0.1s;
+}
+
+.acciones a:hover {
+    transform: scale(1.2);
+}
+
+.vacio {
+    text-align: center;
+    color: #999;
+    padding: 30px 0;
+}
+
+.cancelar {
+    display: inline-block;
+    margin-top: 16px;
+    color: #667eea;
+    text-decoration: none;
+}
+
+.cancelar:hover {
+    text-decoration: underline;
+}

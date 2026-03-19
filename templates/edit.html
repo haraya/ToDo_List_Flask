@@ -1,0 +1,26 @@
+
+
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <h1>Edit task</h1>
+
+    <form action="/edit/{{ indice }}" method="POST" class="form-nueva">
+        <input type="text" name="tarea" value="{{ task }}">
+        <button type="submit">Save</button>
+    </form>
+
+    <div>
+        <a href="/" >
+            <button class="btn btn-danger">
+            Cancel
+            </button>
+
+
+        </a>
+        
+    </div>
+    
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<div style="text-align: center;">
+    <h1>Hi, {{ nombre }}!</h1>
+    <h4>Welcome to your TO DO list tasks.</h4>
+</div>
+
+
+<form action="/" method="POST" class="form-nueva">
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" name="tarea" placeholder="New Task....">
+        <button class="btn btn-success" type="submit" id="button-addon2">Add task</button>
+    </div>
+</form>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"> Task </th>
+            <th scope="col"> Edit Task </th>
+            <th scope="col"> Delete Task </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% if tasks %}
+        {%for t in tasks %}
+        <tr>
+
+            <td> {{ t }} </td>
+            <td>
+                <a href="/edit/{{ loop.index0 }}">
+                    <button type="button" class="btn btn-warning"> ✏️ Edit</button>    
+                </a>
+            </td>
+             <td>
+                <a href="/remove/{{loop.index0}}">
+                    <button type="button" class="btn btn-danger"> ❌ Delete </button> 
+                </a>
+            </td>
+
+        </tr>
+        {% endfor %}
+        {% else %}
+        <p> Yo do not have pending task</p>
+        {% endif %}
+    </tbody>
+</table>
+
+{% endblock %}
