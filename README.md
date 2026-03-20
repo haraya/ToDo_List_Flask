@@ -1,4 +1,4 @@
-# # Flask To-Do List 📝
+# Flask To-Do List 📝
 A web-based task management app built with Python and Flask.
 
 ## Description
